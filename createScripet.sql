@@ -1,0 +1,57 @@
+create table CLIENT
+(
+    ID         NUMERIC identity primary key,
+    NAME       VARCHAR(10) not null,
+    SURNAME    VARCHAR(15) not null,
+    PATRONYMIC VARCHAR(10) not null,
+    PHONE      VARCHAR(10) not null
+);
+
+create table MECHANIC
+(
+    ID         INTEGER identity,
+    NAME       VARCHAR(10) not null,
+    SURNAME    VARCHAR(10) not null,
+    PATRONYMIC VARCHAR(10) not null,
+    PAYMENT    VARCHAR(10) not null
+);
+
+create table "ORDER"
+(
+    ID int identity
+        constraint ORDER_pk
+            primary key,
+    DESCRIPTION  VARCHAR(150) not null,
+    ID_CLIENT    NUMERIC,
+    ID_MECHANIC  INTEGER,
+    DATECREATURE DATE,
+    DATEOFWORK   DATE,
+    VALUE        VARCHAR(10) not null,
+    STATUS       VARCHAR(50) not null
+);
+
+create unique index MECHANIC_ID_UINDEX
+    on MECHANIC (ID);
+
+create unique index SYS_IDX_SYS_PK_10104_10109
+    on MECHANIC (ID);
+
+alter table MECHANIC
+    add primary key (ID);
+
+INSERT INTO CLIENT(NAME,SURNAME,PATRONYMIC,PHONE) VALUES('Панов','Лаврентий','Витальевич','89156161861895');
+INSERT INTO CLIENT(NAME,SURNAME,PATRONYMIC,PHONE) VALUES('Гордеев','Соломон','Ярославович','89156161861895');
+INSERT INTO CLIENT(NAME,SURNAME,PATRONYMIC,PHONE) VALUES('Кузьмин','Модест','Протасьевич','89156161861895');
+INSERT INTO CLIENT(NAME,SURNAME,PATRONYMIC,PHONE) VALUES('Алексеев','Рудольф','Кимович','89156161861895');
+INSERT INTO CLIENT(NAME,SURNAME,PATRONYMIC,PHONE) VALUES('Большакова','Вера','Павловна','89156161861895');
+INSERT INTO CLIENT(NAME,SURNAME,PATRONYMIC,PHONE) VALUES('Гуляева','Симона','Вячеславовна','89156161861895');
+
+INSERT INTO MECHANIC(NAME,SURNAME,PATRONYMIC,PAYMENT) VALUES('Лихачёва', 'Гордей', 'Эльдаровна', '1500');
+INSERT INTO MECHANIC(NAME,SURNAME,PATRONYMIC,PAYMENT) VALUES('Гурьева', 'Лариса', 'Парфеньевна', '1200');
+INSERT INTO MECHANIC(NAME,SURNAME,PATRONYMIC,PAYMENT) VALUES('Никифоров', 'Михаил', 'Львович', '1050');
+INSERT INTO MECHANIC(NAME,SURNAME,PATRONYMIC,PAYMENT) VALUES('Сазонов', 'Анатолий', 'Кимович', '2000');
+INSERT INTO MECHANIC(NAME,SURNAME,PATRONYMIC,PAYMENT) VALUES('Абрамов', 'Ветта', 'Витальевич', '1000');
+
+INSERT INTO ORDER(DESCRIPTION,ID_CLIENT,ID_MECHANIC,DATECREATURE,DATEOFWORK,VALUE,STATUS) VALUES('Ремонт авто',1,1, NOW(), NOW(),'1500','scheduled');
+INSERT INTO ORDER(DESCRIPTION,ID_CLIENT,ID_MECHANIC,DATECREATURE,DATEOFWORK,VALUE,STATUS) VALUES('Ремонт авто',2,2, NOW(), NOW(),'1300','completed');
+INSERT INTO ORDER(DESCRIPTION,ID_CLIENT,ID_MECHANIC,DATECREATURE,DATEOFWORK,VALUE,STATUS) VALUES('Ремонт авто',3,3, NOW(), NOW(),'1200','acceptedByCustomer');

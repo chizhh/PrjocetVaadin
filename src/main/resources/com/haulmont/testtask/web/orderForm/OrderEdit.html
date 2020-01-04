@@ -1,0 +1,61 @@
+<!doctype html>
+<html>
+ <head>
+  <meta charset="UTF-8">
+  <meta name="design-properties" content="{&quot;RULERS_VISIBLE&quot;:true,&quot;GUIDELINES_VISIBLE&quot;:false,&quot;SNAP_TO_OBJECTS&quot;:true,&quot;SNAP_TO_GRID&quot;:true,&quot;SNAPPING_DISTANCE&quot;:10,&quot;GENERATE_GETTERS&quot;:false,&quot;JAVA_SOURCES_ROOT&quot;:&quot;src/main/java&quot;,&quot;THEME&quot;:&quot;valo&quot;}">
+  <meta name="vaadin-version" content="7.7.7">
+ </head>
+ <body>
+  <vaadin-vertical-layout width="500px" height="400px">
+   <vaadin-vertical-layout spacing width="400px" height="300px">
+    <vaadin-horizontal-layout spacing width="250px">
+     <vaadin-label size-auto plain-text>
+       Описание 
+     </vaadin-label>
+     <vaadin-text-field _id="description"></vaadin-text-field>
+    </vaadin-horizontal-layout>
+    <vaadin-horizontal-layout width="250px" _id="clientBoxH">
+     <vaadin-label size-auto plain-text>
+       Клиент 
+     </vaadin-label>
+    </vaadin-horizontal-layout>
+    <vaadin-horizontal-layout width="250px" _id="mechanicBlocH">
+     <vaadin-label size-auto plain-text>
+       Механик 
+     </vaadin-label>
+    </vaadin-horizontal-layout>
+    <vaadin-horizontal-layout width="250px">
+     <vaadin-label size-auto plain-text>
+       Дата создания 
+     </vaadin-label>
+     <vaadin-date-field _id="dateCreature"></vaadin-date-field>
+    </vaadin-horizontal-layout>
+    <vaadin-horizontal-layout width="400px">
+     <vaadin-label size-auto plain-text>
+       Дата окончания работ 
+     </vaadin-label>
+     <vaadin-date-field _id="dateOfWork"></vaadin-date-field>
+    </vaadin-horizontal-layout>
+    <vaadin-horizontal-layout width="250px">
+     <vaadin-label size-auto plain-text>
+       Стоимость 
+     </vaadin-label>
+     <vaadin-text-field _id="cost"></vaadin-text-field>
+    </vaadin-horizontal-layout>
+    <vaadin-horizontal-layout width="250px" _id="statusBoxH">
+     <vaadin-label size-auto plain-text>
+       Статус 
+     </vaadin-label>
+    </vaadin-horizontal-layout>
+    <vaadin-horizontal-layout spacing>
+     <vaadin-button width-full plain-text _id="save" :right>
+       Ок 
+     </vaadin-button>
+     <vaadin-button width-full plain-text _id="cancel" :right>
+       Отменить 
+     </vaadin-button>
+    </vaadin-horizontal-layout>
+   </vaadin-vertical-layout>
+  </vaadin-vertical-layout>
+ </body>
+</html>

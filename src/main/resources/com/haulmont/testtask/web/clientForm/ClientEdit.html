@@ -1,0 +1,46 @@
+<!doctype html>
+<html>
+ <head>
+  <meta charset="UTF-8">
+  <meta name="design-properties" content="{&quot;RULERS_VISIBLE&quot;:true,&quot;GUIDELINES_VISIBLE&quot;:false,&quot;SNAP_TO_OBJECTS&quot;:true,&quot;SNAP_TO_GRID&quot;:true,&quot;SNAPPING_DISTANCE&quot;:10,&quot;GENERATE_GETTERS&quot;:false,&quot;JAVA_SOURCES_ROOT&quot;:&quot;src/main/java&quot;,&quot;THEME&quot;:&quot;valo&quot;}">
+  <meta name="vaadin-version" content="7.7.7">
+ </head>
+ <body>
+  <vaadin-vertical-layout width="360px" height="250px">
+   <vaadin-vertical-layout spacing>
+    <vaadin-horizontal-layout width="250px">
+     <vaadin-label size-auto plain-text :middle :center>
+       Имя 
+     </vaadin-label>
+     <vaadin-text-field _id="name" :middle :right></vaadin-text-field>
+    </vaadin-horizontal-layout>
+    <vaadin-horizontal-layout width="250px">
+     <vaadin-label size-auto plain-text :middle :center>
+       Фамилия 
+     </vaadin-label>
+     <vaadin-text-field _id="surname"></vaadin-text-field>
+    </vaadin-horizontal-layout>
+    <vaadin-horizontal-layout width="250px">
+     <vaadin-label size-auto plain-text :middle :center>
+       Отчество 
+     </vaadin-label>
+     <vaadin-text-field _id="patronymic"></vaadin-text-field>
+    </vaadin-horizontal-layout>
+    <vaadin-horizontal-layout width="250px">
+     <vaadin-label size-auto plain-text :middle :center>
+       Телефон 
+     </vaadin-label>
+     <vaadin-text-field _id="phone"></vaadin-text-field>
+    </vaadin-horizontal-layout>
+    <vaadin-horizontal-layout spacing>
+     <vaadin-button width-full plain-text _id="save">
+       ок 
+     </vaadin-button>
+     <vaadin-button width-full plain-text :right>
+       Отменить 
+     </vaadin-button>
+    </vaadin-horizontal-layout>
+   </vaadin-vertical-layout>
+  </vaadin-vertical-layout>
+ </body>
+</html>

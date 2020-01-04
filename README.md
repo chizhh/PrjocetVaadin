@@ -1,19 +1,14 @@
-Test Task
-=========
 
-Prerequisites
+Сборка и запуск
 -------------
 
-* [Java Development Kit (JDK) 8](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)
-* [Maven 3](https://maven.apache.org/download.cgi)
 
-Build and Run
--------------
-
-1. Run in the command line:
-	```
-	mvn package
-	mvn jetty:run
-	```
-
-2. Open `http://localhost:8080` in a web browser.
+1) Загружаем проект с git.com.
+2) В Папке проекта haulmont\test-task-master\dbpath. Есть файл базы данных MyDB
+3) Стоит указать полный  путь к данному в файлу в классе Util в проперти DB_URL по примеру
+4) Далее, запускаем проект. Командами 
+```
+    mvn package
+    mvn jetty:run
+```
+5) Далее открывем в браузере URL `http://localhost:8080`
